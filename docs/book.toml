@@ -3,10 +3,10 @@ authors = ["Julia Benisty", "Clement Delafargue", "Geoffroy Couprie"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Biscuit"
+title = "Eclipse Biscuit"
 
 [output.html]
-git-repository-url = "https://github.com/biscuit-auth/biscuit"
+git-repository-url = "https://github.com/eclipse-biscuit/biscuit"
 git-repository-icon = "fa-github"
 
 [output.html.playground]

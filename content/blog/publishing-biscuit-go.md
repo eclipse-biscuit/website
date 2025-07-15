@@ -13,7 +13,7 @@ authors = ["geal"]
 lead = "Biscuit-Go now implements the v2 specification!"
 +++
 
-The [Golang version of Biscuit](https://github.com/biscuit-auth/biscuit-go) now implements
+The [Golang version of Biscuit](https://github.com/eclipse-biscuit/biscuit-go) now implements
 the v2 specification, with a complete parser and some usability improvements.
 
 This project was started two years ago by [@titanous aka Jonathan Rudenberg](https://github.com/titanous)

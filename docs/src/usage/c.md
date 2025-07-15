@@ -1,11 +1,11 @@
 # C
 
-The Rust version of Biscuit can be found on [Github](https://github.com/biscuit-auth/biscuit-rust),
+The Rust version of Biscuit can be found on [Github](https://github.com/eclipse-biscuit/biscuit-rust),
 [crates.io](https://crates.io/crates/biscuit-auth) and on [docs.rs](https://docs.rs/biscuit-auth).
 
 ## Install
 
-You can download pre-built packages and source code releases on the [Github releases page](https://github.com/biscuit-auth/biscuit-rust/releases) of the Biscuit Rust project.
+You can download pre-built packages and source code releases on the [Github releases page](https://github.com/eclipse-biscuit/biscuit-rust/releases) of the Biscuit Rust project.
 
 If there is no release available for your platform, you can build one as follows:
 - install [Rust](https://rustup.rs/)

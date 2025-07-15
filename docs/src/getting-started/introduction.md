@@ -3,7 +3,7 @@
 ![Biscuit banner](../images/banner.jpg)
 
 
-Biscuit is a set of building blocks for your authorization layer. By making a coherent experience from the authorization token up to the tools to write policies, it spares you the time spent binding together token scopes, authorization servers, and making sure authorization policies execute correctly in every service. You only need to focus on writing, debugging and deploying your rules.
+Eclipse Biscuit is a set of building blocks for your authorization layer. By making a coherent experience from the authorization token up to the tools to write policies, it spares you the time spent binding together token scopes, authorization servers, and making sure authorization policies execute correctly in every service. You only need to focus on writing, debugging and deploying your rules.
 
 ## Biscuit is a bearer token
 

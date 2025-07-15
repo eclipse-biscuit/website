@@ -1,14 +1,14 @@
 # Cryptography
 
 
-Biscuit uses public key cryptography to build its tokens: the private key is
+Eclipse Biscuit uses public key cryptography to build its tokens: the private key is
 required to create a token, and must be kept safe. The public key can be
 distributed, and is needed to verify a token.
 
-Specifically, it uses the [Ed25519 algorithm](https://en.wikipedia.org/wiki/EdDSA).
+Specifically, it uses either the [Ed25519 algorithm](https://en.wikipedia.org/wiki/EdDSA) or [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) with the [P256-curve](https://neuromancer.sk/std/secg/secp256r1)
 
 A public key signature proves that the signed data has not been modified.
-So how does Biscuit implement attenuation, where a new valid token can be
+So how does Eclipse Biscuit implement attenuation, where a new valid token can be
 created from an existing one?
 
 The token uses a scheme inspired from public key infrastructure, like TLS certificates.

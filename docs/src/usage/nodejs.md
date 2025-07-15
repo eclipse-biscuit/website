@@ -1,8 +1,8 @@
 # NodeJS
 
-The NodeJS version of Biscuit can be found on [Github](https://github.com/biscuit-auth/biscuit-wasm),
+The NodeJS version of Biscuit can be found on [Github](https://github.com/eclipse-biscuit/biscuit-wasm),
 and on [NPM](https://www.npmjs.com/package/@biscuit-auth/biscuit-wasm). It wraps the
-[Biscuit Rust library](https://github.com/biscuit-auth/biscuit-rust) in WebAssembly, and it
+[Biscuit Rust library](https://github.com/eclipse-biscuit/biscuit-rust) in WebAssembly, and it
 provides both CommonJS and EcmaScript module interfaces.
 
 ⚠️ support for WebAssembly modules in NodeJS is disabled by default and needs to be explicitly enabled with a command-line flag: `node --experimental-wasm-modules index.js`.

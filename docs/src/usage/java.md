@@ -1,7 +1,7 @@
 # Java
 
 
-The Java version of Biscuit can be found on [Github](https://github.com/biscuit-auth/biscuit-java),
+The Java version of Biscuit can be found on [Github](https://github.com/eclipse-biscuit/biscuit-java),
 and [maven](https://search.maven.org/artifact/org.biscuitsec/biscuit).
 
 ## Install

@@ -107,7 +107,7 @@ allow if right("file1", "read");
 
 ## Testing things out with the CLI
 
-You can play with third-party blocks with the latest main of [biscuit-cli](https://github.com/biscuit-auth/biscuit-cli).
+You can play with third-party blocks with the latest main of [biscuit-cli](https://github.com/eclipse-biscuit/biscuit-cli).
 
 ```bash
 # the login service generates its keypair and shares the public key
