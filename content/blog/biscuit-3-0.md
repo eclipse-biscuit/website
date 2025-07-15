@@ -275,11 +275,11 @@ and sovereignity constraints.
 Please come have a chat on [our matrix room][matrix] if you have questions about
 biscuit. There is a lot to discover!
 
-[biscuit-rust]: https://github.com/biscuit-auth/biscuit-rust
-[biscuit-wasm]: https://github.com/biscuit-auth/biscuit-wasm
-[biscuit-cli]: https://github.com/biscuit-auth/biscuit-cli
+[biscuit-rust]: https://github.com/eclipse-biscuit/biscuit-rust
+[biscuit-wasm]: https://github.com/eclipse-biscuit/biscuit-wasm
+[biscuit-cli]: https://github.com/eclipse-biscuit/biscuit-cli
 [biscuit-dotnet]: https://github.com/dmunch/biscuit-net
-[biscuit-web-components]: https://github.com/biscuit-auth/biscuit-web-components
+[biscuit-web-components]: https://github.com/eclipse-biscuit/biscuit-web-components
 [third-party-blocks]: ../third-party-blocks-why-how-when-who/
 [matrix]: https://matrix.to/#/!MXwhyfCFLLCfHSYJxg:matrix.org
 [outscale]: https://outscale.com

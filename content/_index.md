@@ -1,15 +1,15 @@
 +++
-title = "Biscuit authorization"
+title = "Eclipse Biscuit"
 
 
 # The homepage contents
 [extra]
-lead = '<b>Biscuit</b> is an authorization token with decentralized verification, offline attenuation and strong security policy enforcement based on a logic language'
+lead = '<b>Eclipse Biscuit</b> is an authorization token with decentralized verification, offline attenuation and strong security policy enforcement based on a logic language'
 url = "/docs/getting-started/introduction/index.html"
 url_button = "Get started"
 repo_version = "Specification"
 repo_license = "Open-source Apache-2.0 License."
-repo_url = "https://github.com/biscuit-auth/biscuit"
+repo_url = "https://github.com/eclipse-biscuit/biscuit"
 token = "En0KEwoEMTIzNBgDIgkKBwgKEgMYgAgSJAgAEiAs2CFWr5WyHHWEiMhTXxVNw4gP7PlADPaGfr_AQk9WohpA6LZTjFfFhcFQrMsp2O7bOI9BOzP-jIE5PGhha62HDfX4t5FLQivX5rUhH5iTv2c-rd0kDSazrww4cD1UCeytDSIiCiCfMgpVPOuqq371l1wHVhCXoIscKW-wrwiKN80vR_Rfzg=="
 
 [[extra.list]]
@@ -28,7 +28,7 @@ content = 'Authorization policies are written in a logic language. They can be p
 
 [[extra.list]]
 title = "Capabilities or Access control lists"
-content = 'Biscuit is naturally suited for capabilities based authorization, by carrying a token customized for the request. But you can also provide verification side ACLs as Datalog'
+content = 'Eclipse Biscuit is naturally suited for capabilities based authorization, by carrying a token customized for the request. But you can also provide verification side ACLs as Datalog'
 
 [[extra.list]]
 title = "Revocation"
@@ -36,7 +36,7 @@ content = 'All tokens come with unique revocation identifiers, that can be used 
 
 [[extra.list]]
 title = "Portable"
-content = 'Biscuit is available in Rust, Haskell, Go, Java, JS (node & browser), WebAssembly, C, Python, C#… All you need for a new implementation is a Protobuf generator and Ed25519 signing. The specification comes with a list of predefined test cases'
+content = 'Eclipse Biscuit is available in Rust, Haskell, Go, Java, JS (node & browser), WebAssembly, C, Python, C#… All you need for a new implementation is a Protobuf generator and Ed25519 signing. The specification comes with a list of predefined test cases'
 
 +++
 
@@ -74,7 +74,7 @@ allow if
   <img src="/img/thumbnail.png" style="height:0" />
   <div class="row justify-content-center text-center">
       <h2>Meet the team</h2>
-      <p>Biscuit is the result of the help of dozens of contributors over the years, patiently refining the specification and implementations. The project is maintained and led by:</p>
+      <p>Eclipse Biscuit is the result of the help of dozens of contributors over the years, patiently refining the specification and implementations. The project is maintained and led by:</p>
       <div class="col-lg-5">
         <h2 class="h4">Geoffroy Couprie</h2>
         <img src="/img/geoffroy.jpg" style="width: 50%; margin-bottom: 10px" />

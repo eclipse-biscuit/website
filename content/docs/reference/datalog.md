@@ -9,7 +9,7 @@ sort_by = "weight"
 template = "docs/page.html"
 
 [extra]
-lead = "Biscuit uses a dialect of Datalog for its authorization policies."
+lead = "Eclipse Biscuit uses a dialect of Datalog for its authorization policies."
 toc = true
 top = false
 +++

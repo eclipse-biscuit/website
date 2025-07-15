@@ -17,7 +17,7 @@ supporting offline attenuation, and a language for authorization policies based 
 It is used to build decentralized authorization systems, such as microservices architectures,
 or advanced delegation patterns with user facing systems.
 
-Building on more than a year of use since the last feature release, the biscuit team is proud to announce [biscuit `v3.3`](https://github.com/biscuit-auth/biscuit/releases/tag/v3.3), with a lot of new features, stronger crypto and (hopefully) a clearer version scheme.
+Building on more than a year of use since the last feature release, the biscuit team is proud to announce [biscuit `v3.3`](https://github.com/eclipse-biscuit/biscuit/releases/tag/v3.3), with a lot of new features, stronger crypto and (hopefully) a clearer version scheme.
 
 A sizeable chunk of the new datalog features has been financed by [3DS Outscale][outscale].
 
@@ -175,8 +175,8 @@ biscuit. There is a lot to discover!
 
 [matrix]: https://matrix.to/#/!MXwhyfCFLLCfHSYJxg:matrix.org
 [outscale]: https://outscale.com
-[biscuit-rust]: https://github.com/biscuit-auth/biscuit-rust
-[biscuit-cli]: https://github.com/biscuit-auth/biscuit-cli
-[biscuit-web-components]: https://github.com/biscuit-auth/biscuit-web-components
-[biscuit-python]: https://github.com/biscuit-auth/biscuit-python
-[biscuit-wasm]: https://github.com/biscuit-auth/biscuit-wasm
+[biscuit-rust]: https://github.com/eclipse-biscuit/biscuit-rust
+[biscuit-cli]: https://github.com/eclipse-biscuit/biscuit-cli
+[biscuit-web-components]: https://github.com/eclipse-biscuit/biscuit-web-components
+[biscuit-python]: https://github.com/eclipse-biscuit/biscuit-python
+[biscuit-wasm]: https://github.com/eclipse-biscuit/biscuit-wasm

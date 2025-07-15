@@ -1,6 +1,6 @@
 +++
-title = "Biscuit contributors"
-description = "Individuals and companies contributing to biscuit"
+title = "Eclipse Biscuit contributors"
+description = "Individuals and companies contributing to eclipse biscuit"
 date = 2023-10-26T19:30:00+00:00
 updated = 2023-10-26T19:30:00+00:00
 draft = false
@@ -13,9 +13,9 @@ toc = true
 top = false
 +++
 
-Biscuit is provided as a spec and a series of libraries, all open-source. Some contributions are done on free time, some as part as paid work.
+Eclipse Biscuit is provided as a spec and a series of libraries, all open-source. Some contributions are done on free time, some as part as paid work.
 
-If you manage or work for a company that has a vested interest in biscuit, you should contact the biscuit team to discuss sponsoring opportunities.
+If you manage or work for a company that has a vested interest in eclipse biscuit, you should contact the team to discuss sponsoring opportunities.
 
 ## Core team
 

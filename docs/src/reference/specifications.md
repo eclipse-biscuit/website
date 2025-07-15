@@ -579,7 +579,7 @@ TODO: same as the authorizer, but we do not need to know the root key
 
 ## Format
 
-The current version of the format is in [schema.proto](https://github.com/biscuit-auth/biscuit/blob/master/schema.proto)
+The current version of the format is in [schema.proto](https://github.com/eclipse-biscuit/biscuit/blob/master/schema.proto)
 
 The token contains two levels of serialization. The main structure that will be
 transmitted over the wire is either the normal Biscuit wrapper:
@@ -987,7 +987,7 @@ by encoding them with base64url.
 ## Test cases
 
 We provide sample tokens and the expected result of their verification at
-[https://github.com/biscuit-auth/biscuit/tree/master/samples](https://github.com/CleverCloud/biscuit/tree/master/samples)
+[https://github.com/eclipse-biscuit/biscuit/tree/master/samples](https://github.com/CleverCloud/biscuit/tree/master/samples)
 
 ## References
 

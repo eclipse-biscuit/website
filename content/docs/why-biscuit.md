@@ -13,11 +13,11 @@ toc = true
 top = false
 +++
 
-Biscuit has been created in the context of distributed systems where centralized authorization is not possible. As such, it is particulary suited for microservices architecture, even though it could also be used in more centralized systems.
+Eclipse Biscuit has been created in the context of distributed systems where centralized authorization is not possible. As such, it is particulary suited for microservices architecture, even though it could also be used in more centralized systems.
 
 ## Goals
 
-Biscuit is an authorization token with the following properties:
+Eclipse Biscuit is an authorization token with the following properties:
 
 - distributed authorization: any node is able validate a token only with public information;
 - offline attenuation: a new, valid token can be created from another one by attenuating its rights, by its holder, without communicating with anyone;

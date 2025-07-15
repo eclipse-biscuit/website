@@ -4,7 +4,7 @@
 
 ### From pre-built packages
 
-Pre-built packages are available: <https://github.com/biscuit-auth/biscuit-cli/releases/latest>
+Pre-built packages are available: <https://github.com/eclipse-biscuit/biscuit-cli/releases/latest>
 
 ### With `cargo`
 
@@ -15,7 +15,7 @@ cargo install biscuit-cli
 ### From source
 
 ```
-git clone https://github.com/biscuit-auth/biscuit-cli.git
+git clone https://github.com/eclipse-biscuit/biscuit-cli.git
 cd biscuit-cli
 cargo install --path .
 ```

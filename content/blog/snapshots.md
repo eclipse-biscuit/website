@@ -106,7 +106,7 @@ Saving and loading snapshots is available in [`biscuit-rust`][biscuit-rust] and 
 [`biscuit-cli`][biscuit-cli] also lets you save a snapshot (`biscuit inspect --dump-snapshot-to`) and inspect a snapshot (`biscuit inspect-snapshot`), with optional authorizer code and queries. [`biscuit-web-components`][biscuit-web-components] provides a `<bc-snapshot-printer>` component, which allows inspecting and querying snapshot.
 
 [biscuit-rust]: https://crates.io/crates/biscuit-auth
-[biscuit-cli]: https://github.com/biscuit-auth/biscuit-cli
+[biscuit-cli]: https://github.com/eclipse-biscuit/biscuit-cli
 [biscuit-web-components]: https://doc.biscuitsec.org/usage/web-components
 [biscuit-python]: https://pypi.org/project/biscuit-python/
 [authorizer]: https://docs.rs/biscuit-auth/4.0.0/biscuit_auth/struct.Authorizer.html

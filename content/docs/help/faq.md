@@ -14,9 +14,9 @@ toc = true
 top = false
 +++
 
-## What is Biscuit?
+## What is Eclipse Biscuit?
 
-Biscuit is a platform made of three parts:
+Eclipse Biscuit is a platform made of three parts:
 
 - a token format;
 - a logic language for describing data and authorization policies;

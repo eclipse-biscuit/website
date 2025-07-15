@@ -12,7 +12,7 @@ authors = ["clementd"]
 lead = "A potential security issue has been detected and addressed"
 +++
 
-Today we have issued a [security advisory](https://github.com/biscuit-auth/biscuit/security/advisories/GHSA-rgqv-mwc3-c78m) and updates to third-party blocks covering the specification, biscuit-rust, biscuit-haskell, biscuit-java, biscuit-wasm and biscuit-python, as well as biscuit-web-components and biscuit-cli.
+Today we have issued a [security advisory](https://github.com/eclipse-biscuit/biscuit/security/advisories/GHSA-rgqv-mwc3-c78m) and updates to third-party blocks covering the specification, biscuit-rust, biscuit-haskell, biscuit-java, biscuit-wasm and biscuit-python, as well as biscuit-web-components and biscuit-cli.
 
 ## tl;dr:
 
@@ -50,11 +50,11 @@ As an example:
 - Third-party B generates the following third-party block `thirdparty("b"); check if thirdparty("c") trusting ${pubkeyC}`
 - Due to the altered symbol table, the actual meaning of the block is `thirdparty("b"); check if thirdparty("c") trusting ${pubkeyD}`
 
-More details in the [biscuit spec security advisory](https://github.com/biscuit-auth/biscuit/security/advisories/GHSA-rgqv-mwc3-c78m)
+More details in the [biscuit spec security advisory](https://github.com/eclipse-biscuit/biscuit/security/advisories/GHSA-rgqv-mwc3-c78m)
 
 ## Spec changes
 
-Changes are listed in a [dedicated commit](https://github.com/biscuit-auth/biscuit/commit/c87cbb5d778964d6574df3e9e6579567cad12fff).
+Changes are listed in a [dedicated commit](https://github.com/eclipse-biscuit/biscuit/commit/c87cbb5d778964d6574df3e9e6579567cad12fff).
 
 The solution is to make the public key interning completely isolated for third-party blocks, same as what we do with strings. This has a small impact on token size, but makes the implementation simpler (this part of the specification was easy to get wrong).
 

@@ -33,14 +33,14 @@ jobs:
       - name: Install Zola
         run: |
           #sudo snap install --edge zola
-          curl -L https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz -o zola.tar.gz
+          curl -L https://github.com/getzola/zola/releases/download/v0.21.0/zola-v0.21.0-x86_64-unknown-linux-gnu.tar.gz -o zola.tar.gz
           tar xvf zola.tar.gz
       - name: Build website
         run: |
           ./zola build
       - name: Install mdbook
         run: |
-          curl -L https://github.com/rust-lang/mdBook/releases/download/v0.4.28/mdbook-v0.4.28-x86_64-unknown-linux-gnu.tar.gz -o mdbook.tar.gz
+          curl -L https://github.com/rust-lang/mdBook/releases/download/v0.4.52/mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz -o mdbook.tar.gz
           tar xvf mdbook.tar.gz
       - name: Build docs
         run: |
