@@ -1,11 +1,12 @@
 on:
-  pull_request:
+  push:
     branches:
       - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: deploy
 
     steps:
       - uses: actions/checkout@v4
@@ -44,4 +45,19 @@ jobs:
       - name: Build docs
         run: |
           ./mdbook build docs
+      - name: Deploy biscuitsec.org to netlify
+        run: |
+          zip -r biscuitsec.zip public
+          curl -H "Content-Type: application/zip" \
+               -H "Authorization: Bearer ${{ secrets.NETLIFY_TOKEN }}" \
+               --data-binary @biscuitsec.zip \
+               https://api.netlify.com/api/v1/sites/biscuitsec.netlify.app/deploys
+      - name: Deploy doc.biscuitsec.org to netlify
+        run: |
+          zip -r doc.biscuitsec.zip docs/book
+          curl -H "Content-Type: application/zip" \
+               -H "Authorization: Bearer ${{ secrets.NETLIFY_TOKEN }}" \
+               --data-binary @doc.biscuitsec.zip \
+               https://api.netlify.com/api/v1/sites/doc-biscuitsec.netlify.app/deploys
+ 
 
