@@ -73,7 +73,7 @@ In general, the OAuth authorization server delivers both an access token and a r
 * the refresh token is used to request a new access token from the authorization server. It is long lived, only the authorization server will ever see it, and according to current best practices, should be single use (the AS will deliver a new refresh token along with the new access token)
 
 <details>
-Making the refresh token single use gives a neat property: you can detect if it was stolen. If the attacker steals the refresh token and uses it to get a new access token, at some point the user will try to use it too to get a new access token. So if it is used twice, you know one of these uses is malicious, and that's when you raise an alert and [revoke all the tokens for this user](https://www.biscuitsec.org/docs/guides/revocation/).
+Making the refresh token single use gives a neat property: you can detect if it was stolen. If the attacker steals the refresh token and uses it to get a new access token, at some point the user will try to use it too to get a new access token. So if it is used twice, you know one of these uses is malicious, and that's when you raise an alert and <a href="https://www.biscuitsec.org/docs/guides/revocation/"> revoke all the tokens for this user</a>.
 </details>
 
 This is a way to reduce risks by having a short expiration for the access token, and a reduced attack surface for the authorization server if it is separated from the main application.
