@@ -84,7 +84,8 @@ if err := authorizer.Authorize(); err != nil {
     fmt.Printf("failed authorizing token: %v\n", err)
 } else {
     fmt.Println("success authorizing token")
-}```
+}
+```
 
 ## Attenuate a token
 
