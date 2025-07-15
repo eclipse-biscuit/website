@@ -29,7 +29,7 @@ A Datalog program contains "facts", which represent data, and "rules", which can
 In our example, we will create a token that identifies its carrier as a _user_ whose user id is `"1234"`.
 To do so, we will create a file named `authority.biscuit-datalog`, with the following contents:
 
-`authority.biscuit-datalog`
+_authority.biscuit-datalog_
 
 <bc-datalog-editor>
 <pre><code>
@@ -209,7 +209,7 @@ allow if is_allowed($user, $resource, $op);
 </bc-token-printer>
 
 ```
-❯ biscuit inspect - --verify-with-file authorizer.datalog --public-key 41e77e842e5c952a29233992dc8ebbedd2d83291a89bb0eec34457e723a69526
+❯ biscuit inspect - --verify-with-file authorizer.biscuit-datalog --public-key 41e77e842e5c952a29233992dc8ebbedd2d83291a89bb0eec34457e723a69526
 Please input a base64-encoded biscuit, followed by <enter> and ^D
 En0KEwoEMTIzNBgDIgkKBwgKEgMYgAgSJAgAEiBw-OHV3egI0IVjiC1vdB7WZ__t0FCvB2s-81PexdwuqxpAolMr9XDP7T44qgdXxtumc2P3O93pCHaGSuBUs3_f8nsQJ7NU6PdkujZIMStzEJ36CDnxawSZjUAKoTO-a1cCDRqUAQoqGAMyJgokCgIIGxIGCAUSAggFGhYKBAoCCAUKCAoGIICP_40GCgQaAggCEiQIABIgkzpUMZubXcd8K7mWNchjb0D2QXeYoWtlZw2KMryKubUaQOFlx4iPKUqKeJrEH4MKO7tjM3H9z1rYbOj-gKGTtYJ4bac0kIoWl9v_7q7qN7fQJJgj0IU4jx4_QhxIk9SeigMiIgogqvHkuXrYkoMRvKgT9zNV4BEKC5W2K8L7NcGiX44ASwE=
 Authority block:
