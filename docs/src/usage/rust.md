@@ -8,7 +8,7 @@ The Rust version of Biscuit can be found on [Github](https://github.com/eclipse-
 In `Cargo.toml`:
 
 ```toml
-biscuit-auth = "3.1"
+biscuit-auth = "6.0"
 ```
 
 ## Create a root key
@@ -42,8 +42,8 @@ fn create_token(root: &KeyPair) -> Result<Biscuit, error::Token> {
     );
 
     // it is possible to modify a builder by adding a datalog snippet
-    biscuit_merge!(
-      &mut authority,
+    authority = biscuit_merge!(
+      authority,
       r#"check if operation("read");"#
     );
 
@@ -61,21 +61,16 @@ fn authorize(token: &Biscuit) -> Result<(), error::Token> {
 
     // same as the `biscuit!` macro. There is also a `authorizer_merge!`
     // macro for dynamic authorizer construction
-    let mut authorizer = authorizer!(
-      r#"operation({operation});"#
-    );
-
-    // register a fact containing the current time for TTL checks
-    authorizer.set_time();
-
-    // add a `allow if true;` policy
-    // meaning that we are relying entirely on checks carried in the token itself
-    authorizer.add_allow_all();
+    let mut authorizer = authorizer!(r#"operation({operation});"#)
+        // register a fact containing the current time for TTL checks
+        .time()
+        // add a `allow if true;` policy
+        // meaning that we are relying entirely on checks carried in the token itself
+        .allow_all()
+        .build(token)?;
 
     // link the token to the authorizer
-    authorizer.add_token(token)?;
-
-    let result = authorizer.authorize();
+    let result = authorizer.authorize(token);
 
     // store the authorization context
     println!("{}", authorizer.to_base64_snapshot()?);
@@ -85,12 +80,17 @@ fn authorize(token: &Biscuit) -> Result<(), error::Token> {
 }
 ```
 
-## Restore an authorizer from a snasphot
+## Restore an authorizer (or an authorizer builder) from a snapshot
 
 ```rust
 use biscuit_auth::Authorizer;
 
 fn display(snapshot: &str) {
+  // this contains only the authorizer block and can be used to authorize a token
+  let authorizer_builder = AuthorizerBuilder::from_base64_snapshot(snapshot).unwrap();
+  println!("{authorizer_builder}");
+
+  // this contains the whole authorizer context and can only inspected and queried
   let authorizer = Authorizer::from_base64_snapshot(snapshot).unwrap();
   println!("{authorizer}");
 }
@@ -105,9 +105,8 @@ use std::time::{Duration, SystemTime};
 fn attenuate(token: &Biscuit) -> Result<Biscuit, error::Token> {
     let res = "file1";
     // same as `biscuit!` and `authorizer!`, a `block_merge!` macro is available
-    let mut builder = block!(r#"check if resource({res});"#);
-
-    builder.check_expiration_date(SystemTime::now() + Duration::from_secs(60));
+    let builder = block!(r#"check if resource({res});"#)
+        .check_expiration_date(SystemTime::now() + Duration::from_secs(60));
 
     token.append(builder)
 }
@@ -122,8 +121,9 @@ let sealed_token = token.seal()?;
 ## Reject revoked tokens
 
 The `Biscuit::revocation_identifiers` method returns the list of revocation identifiers as byte arrays.
-Don't forget to parse them from a textual representation (for instance
-hexadecimal) if you store them as text values.
+Don't forget to parse them from a textual representation (hexadecimal) if you store them as text values (biscuit-cli displays revocation IDs as hexadecimal strings).
+
+Do **not** compare base64-encoded values of revocation identifiers since canonicity is not guaranteed (different base64 encodings can map to the same revocation id).
 
 ```rust
 let identifiers: Vec<Vec<u8>> = token.revocation_identifiers();
