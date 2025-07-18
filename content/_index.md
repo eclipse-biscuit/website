@@ -78,12 +78,17 @@ allow if
       <div class="col-lg-5">
         <h2 class="h4">Geoffroy Couprie</h2>
         <img src="/img/geoffroy.jpg" style="width: 50%; margin-bottom: 10px" />
-        <p>Geoffroy has worked on distributed systems security for over a decade, and is now a Senior Staff Engineer at Apollo GraphQL. You will often find him deep in discussions on protocols and cryptography.</p>
+        <p>Geoffroy has worked on distributed systems security for over a decade, and is now working at Proton. You will often find him deep in discussions on protocols and cryptography.</p>
       </div>
       <div class="col-lg-5">
         <h2 class="h4">Clément Delafargue</h2>
         <img src="/img/clement.jpg" style="width: 50%; margin-bottom: 10px" />
         <p>Clément is a functional programmer working at Outscale. He loves discussing about FP, distributed systems, cloud architecture, and dogs obviously.</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">Cédric Corbière</h2>
+        <img src="/img/cedric.jpg" style="width: 50%; margin-bottom: 10px" />
+        <p>Cédric has an extensive experience in working within security-constrained domains, and coffee brewing.</p>
       </div>
   </div>
 </div>
