@@ -69,14 +69,10 @@ fn authorize(token: &Biscuit) -> Result<(), error::Token> {
         .allow_all()
         .build(token)?;
 
-    // link the token to the authorizer
-    let result = authorizer.authorize(token);
-
     // store the authorization context
     println!("{}", authorizer.to_base64_snapshot()?);
 
-    let _ = result?;
-    Ok(())
+    authorizer.authorize()
 }
 ```
 
