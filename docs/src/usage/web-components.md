@@ -32,7 +32,7 @@ Here is an example of a [rollup]() configuration that will generate a bundle und
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@biscuit-auth/web-components": "0.5.0"
+    "@biscuit-auth/web-components": "0.6.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
@@ -161,7 +161,7 @@ It will also display the corresponding public key.
 
 The following (optional) attributes are available:
 
-- `privateKey`: an hex-encoded private key used to sign the token. Only use this
+- `privateKey`: a private key (hex-formatted) used to sign the token. Only use this
   for examples and never put an actual private key here.
 
 Additionally, token blocks can be provided through children elements carrying
@@ -174,7 +174,7 @@ attribute, which will be used to sign the block.
 // authority block
 user("1234");
 </code></pre>
-<pre><code class="block" privateKey="ed25519/ca54b85182980232415914f508e743ee13da8024ebb12512bb517d151f4a5029">
+<pre><code class="block" privateKey="ed25519-private/ca54b85182980232415914f508e743ee13da8024ebb12512bb517d151f4a5029">
 // attenuation block
 check if time($time), $time < 2023-05-04T00:00:00Z;
 </code></pre>
@@ -186,7 +186,7 @@ check if time($time), $time < 2023-05-04T00:00:00Z;
 // authority block
 user("1234");
 </code></pre>
-<pre><code class="block" privateKey="ed25519/ca54b85182980232415914f508e743ee13da8024ebb12512bb517d151f4a5029">
+<pre><code class="block" privateKey="ed25519-private/ca54b85182980232415914f508e743ee13da8024ebb12512bb517d151f4a5029">
 // attenuation block
 check if time($time), $time < 2023-05-04T00:00:00Z;
 </code></pre>
@@ -233,7 +233,7 @@ carry an optional `privateKey` attribute, which will be used to sign the block.
 // authority block
 user("1234");
 </code></pre>
-<pre><code class="block" privateKey="ed25519/ca54b85182980232415914f508e743ee13da8024ebb12512bb517d151f4a5029">
+<pre><code class="block" privateKey="ed25519-private/ca54b85182980232415914f508e743ee13da8024ebb12512bb517d151f4a5029">
 // attenuation block
 check if time($time), $time < 2023-05-04T00:00:00Z;
 thirdParty(true);
@@ -252,7 +252,7 @@ check if thirdParty(true) trusting ed25519/1f76d2bdd5e8dc2c1dc1142d85d626b19caf8
 // authority block
 user("1234");
 </code></pre>
-<pre><code class="block" privateKey="ed25519/ca54b85182980232415914f508e743ee13da8024ebb12512bb517d151f4a5029">
+<pre><code class="block" privateKey="ed25519-private/ca54b85182980232415914f508e743ee13da8024ebb12512bb517d151f4a5029">
 // attenuation block
 check if time($time), $time < 2023-05-04T00:00:00Z;
 thirdParty(true);
