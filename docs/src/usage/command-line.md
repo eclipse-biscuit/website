@@ -26,22 +26,51 @@ cargo install --path .
 $ # this will output the keypair, you can then copy/paste the components
 $ biscuit keypair
 > Generating a new random keypair
-> Private key: 4aa4bae701c6eb05cfe0bdd68d5fab236fc0d0d3dcb2a9b582a0d87b23e04500
-> Public key: 687b536c502f10f5978eee2d0c04f2869d15cf7858983dc50b6729b15e203809
+> Private key: ed25519-private/4aa4bae701c6eb05cfe0bdd68d5fab236fc0d0d3dcb2a9b582a0d87b23e04500
+> Public key: ed25519/687b536c502f10f5978eee2d0c04f2869d15cf7858983dc50b6729b15e203809
 
 $ # this will save the private key to a file so you can use it later
 $ biscuit keypair --only-private-key > private-key-file
 $ cat private-key-file
-> e4d17ae4fd444ace42ab0a813c242643cf9b4ef96ca07c502e8e72142a3e8a2e
+> ed25519-private/e4d17ae4fd444ace42ab0a813c242643cf9b4ef96ca07c502e8e72142a3e8a2e
 ```
 
 ### Generate a public key from a private key
 
 ```
-$ biscuit keypair --from-private-key-file private-key-file --only-public-key
-> 51c20fb821f7d6a3939fba5c80f0915d80087799de6988a3259c6782bea93d7f
+$ biscuit keypair --from-file private-key-file --only-public-key
+> ed25519/51c20fb821f7d6a3939fba5c80f0915d80087799de6988a3259c6782bea93d7f
 
-$ biscuit keypair --from-private-key-file private-key-file --only-public-key > public-key-file
+$ biscuit keypair --from-file private-key-file --only-public-key > public-key-file
+```
+
+#### Choose the algorithm and format
+
+```
+# custom algorithm (default is ed25519)
+$ biscuit keypair  --key-algorithm secp256r1
+> Generating a new random keypair
+> Private key: secp256r1-private/189ce3147fe28b8875ae5478ecc514cfd6ab3fd020fcd2386432e93150f0e6eb
+> Public key: secp256r1/0332b24b4008ea3efb281a92d65f19987b577f6ed90e398abdf7df1dad53de13c9
+
+# custom output format
+$ biscuit keypair --key-output-format pem
+> Generating a new random keypair
+> -----BEGIN PRIVATE KEY-----
+> MFECAQEwBQYDK2VwBCIEIEY1832SSOdspf07T3ZGEAmFevrMpibm4en68Jw/tX8S
+> gSEA/dNHKD50Enh9Y0QpsvN8zttpojIo8Gf4KTFphsU2VbE=
+> -----END PRIVATE KEY-----
+> -----BEGIN PUBLIC KEY-----
+> MCowBQYDK2VwAyEA/dNHKD50Enh9Y0QpsvN8zttpojIo8Gf4KTFphsU2VbE=
+> -----END PUBLIC KEY-----
+
+# raw storage is possible, but the key algorithm must be provided explicitly
+# be extra careful
+$ biscuit keypair --key-algorithm secp256r1 --key-output-format raw --only-private-key > raw-private-key
+$ biscuit keypair --from-file raw-private-key --from-format raw --from-algorithm secp256r1
+> Generating a keypair from the provided private key
+> Private key: secp256r1-private/abeac86b0716818871e876dd893437450ca987bbc6015f040c5c6084744bc875
+> Public key: secp256r1/022b6b37557cbd2c522f36fd37899de8022f55ac4f73ca2e1489692fd56cd34990
 ```
 
 ## Create a token
@@ -72,7 +101,7 @@ $ echo 'right("file1");' | biscuit generate --raw --private-key-file private-key
 $ biscuit inspect --raw-input biscuit-file.bc --public-key-file public-key-file
 > Open biscuit
 > Authority block:
-> == Datalog ==
+> == Datalog v3.0 ==
 > right("file1");
 >
 > == Revocation id ==
@@ -93,7 +122,7 @@ $ biscuit inspect --raw-input biscuit-file.bc \
    --include-time
 > Open biscuit
 > Authority block:
-> == Datalog ==
+> == Datalog v3.0 ==
 > right("file1");
 >
 > == Revocation id ==
