@@ -12,6 +12,7 @@ draft = false
 [extra.author_pages]
 "geal" = "authors/geal.md"
 "clementd" = "authors/clementd.md"
+"saoirse-a" = "authors/saoirse-a.md"
 +++
 
 The authors of the blog articles.
