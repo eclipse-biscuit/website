@@ -4,11 +4,17 @@ The Go version of Biscuit can be found on [Github](https://github.com/eclipse-bi
 
 ## Install
 
+With Go get:
+
+```
+	go get github.com/biscuit-auth/biscuit-go/v2@v2
+```
+
 In `go.mod`:
 
 ```
 require(
-    github.com/eclipse-biscuit/biscuit-go v2.2.0
+    github.com/biscuit-auth/biscuit-go/v2 v2.2.0
 )
 ```
 
