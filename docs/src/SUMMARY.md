@@ -18,6 +18,7 @@
     - [Haskell](usage/haskell.md)
     - [Java](usage/java.md)
     - [NodeJS](usage/nodejs.md)
+    - [PHP](usage/php.md)
     - [Python](usage/python.md)
     - [Rust](usage/rust.md)
     - [Swift](usage/swift.md)
