@@ -83,7 +83,7 @@ allow if
       <div class="col-lg-5">
         <h2 class="h4">Clément Delafargue</h2>
         <img src="/img/clement.jpg" style="width: 50%; margin-bottom: 10px" />
-        <p>Clément is a functional programmer working at Outscale. He loves discussing about FP, distributed systems, cloud architecture, and dogs obviously.</p>
+        <p>Clément is a functional programmer working at Datadog. He loves discussing FP, distributed systems, cloud architecture, fancy coffee brewing, and dogs obviously.</p>
       </div>
       <div class="col-lg-5">
         <h2 class="h4">Cédric Corbière</h2>
