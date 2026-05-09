@@ -13,19 +13,34 @@ All classes live under the `Biscuit\Auth` namespace.
 
 ## Install
 
-Prebuilt binaries are available on the [GitHub releases page](https://github.com/ptondereau/biscuit-php/releases).
-You can also compile the extension from source — see the
-[project README](https://github.com/ptondereau/biscuit-php#installation) for build instructions.
+The recommended way to install the extension is via [PIE](https://github.com/php/pie)
+(the PHP Installer for Extensions), which handles building and installing the extension for you:
+
+```sh
+pie install ptondereau/biscuit-php
+```
+
+Prebuilt binaries are also available on the [GitHub releases page](https://github.com/ptondereau/biscuit-php/releases),
+and you can compile the extension from source. See the
+[project README](https://github.com/ptondereau/biscuit-php#installation) for details.
 
 In `composer.json`:
 
 ```json
 {
     "require": {
-        "ext-biscuit-php": "*"
+        "ext-biscuit_php": "*"
     }
 }
 ```
+
+### Symfony
+
+Symfony users can integrate Biscuit through the dedicated bundle:
+[ptondereau/biscuit-sf-bundle](https://github.com/ptondereau/biscuit-sf-bundle).
+It wires the extension into the Symfony container and provides ready-to-use services.
+
+> **Warning:** The Symfony bundle is not stable yet. Expect breaking changes before the first stable release.
 
 ## Create a root key
 
