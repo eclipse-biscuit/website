@@ -2,7 +2,7 @@
 title = "FAQ"
 description = "Answers to frequently asked questions."
 date = 2021-05-01T19:30:00+00:00
-updated = 2021-05-01T19:30:00+00:00
+updated = 2026-05-19T10:30:00+02:00
 draft = false
 weight = 30
 sort_by = "weight"
@@ -66,6 +66,12 @@ JWT fits a specific use case: transmitting identity and authorization informatio
 It was also specified with a number of pitfalls that created a number of security incidents over the years. Projects like [PASETO](https://paseto.io/) address these issues within the same scope as JWT.
 
 Biscuit builds upon the experience earned developing authorization systems with JWT and other tools, takes steps to address their risks, and clearly target the larger systems we are now building.
+
+## Are biscuit quantum-resistant?
+
+As of now, biscuit only supports `ed25519` and specific `ECDSA` profiles, which are _not_ quantum resistant. There is ongoing work to add support to quantum-resistant signature schemes (thanks to biscuit’s support for cryptographic agility). The current consensus is that 2029 is our deadline. Since biscuit authority keys are meant to be rotated regularly (every 1-3 months), this gives everyone time to find a suitable solution. The current issues are key and signature sizes, as well as performance and battle-testing.
+
+We published [our stance on PQC in biscuit](/blog/dilithium-digestives-or-baking-quantum-resistant-biscuits/)
 
 
 ## What is your favorite Biscuit recipe?
