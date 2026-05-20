@@ -30,7 +30,7 @@ The initial choice of `ed25519` in biscuit is due, in no small part, to its comp
 
 If we were to add support for `ed25519`’s most standard PQC counterpart, `ML-DSA-44` (Dilithium), a biscuit token would have to carry *1312 bytes* public keys, *2420 bytes* signatures, a *2528 bytes* private key, for a combined overhead of _2528+3736*n bytes_. While an `ed25519` biscuit reaching 1kb is relatively rare, dilithium biscuits would start with a 6kb overhead. Good luck shoving that in a query param.
 
-Dilithium is not the only credible replacement for ECC signatures. Another promising one is Mayo (a conspicuously eggless improvement over the Oil-and-Vinegar scheme; I must concede that "salad dressing" is not as catchy), which boasts significantly smaller signatures (as low as *454 bytes*), at the expense of signature sizes (*1420 bytes*). This is better, but still huge compared to `ed25519`.
+Dilithium is not the only credible replacement for ECC signatures. Another promising one is Mayo (a conspicuously eggless improvement over the Oil-and-Vinegar scheme; I must concede that "salad dressing" is not as catchy), which boasts significantly smaller signatures (as low as *454 bytes*), at the expense of public key sizes (*1420 bytes*). This is better, but still huge compared to `ed25519`.
 
 Using quantum-resistant signature schemes in biscuit is technically feasible, but essentially nullifies a core property of biscuit tokens: their compactness.
 
