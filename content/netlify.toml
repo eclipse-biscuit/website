@@ -203,3 +203,8 @@
   status = 301
   to = "https://doc.biscuitsec.org/reference/datalog.html"
 
+[[redirects]]
+  force = true
+  from = "/.well-known/atproto-did"
+  to = "/well-known/atproto-did"
+  status = 200
